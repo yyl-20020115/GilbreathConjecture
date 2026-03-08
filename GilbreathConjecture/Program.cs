@@ -1,4 +1,5 @@
 ﻿namespace GilbreathConjecture;
+
 class Program
 {
     static void Main()
@@ -18,7 +19,7 @@ class Program
         {
             Console.WriteLine(string.Join(", ", row));
         }
-         
+
         // 验证每行首项是否为1
         Console.WriteLine("\n验证结果:");
         var allFirstOnes = true;
@@ -28,17 +29,12 @@ class Program
             {
                 allFirstOnes = false;
                 Console.WriteLine($"第{i}行首项不是1: {triangle[i][0]}");
-            } 
+            }
         }
-
-        if (allFirstOnes)
-        {
-            Console.WriteLine("所有行首项均为1，验证了吉尔布雷思猜想");
-        }
-        else
-        {
-            Console.WriteLine("存在行首项不为1，吉尔布雷思猜想不成立");
-        }
+        Console.WriteLine(
+            allFirstOnes
+            ? "所有行首项均为1，验证了吉尔布雷思猜想"
+            : "存在行首项不为1，吉尔布雷思猜想不成立");
     }
 
     // 生成前n个素数
