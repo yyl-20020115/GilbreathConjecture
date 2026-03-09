@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         // 验证吉尔布雷思猜想
-        int primeCount = 40; // 生成前20个素数
+        int primeCount = 80; // 生成前20个素数
         var primes = GeneratePrimes(primeCount);
 
         Console.WriteLine($"前{primeCount}个素数:");
